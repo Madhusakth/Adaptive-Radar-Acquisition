@@ -17,3 +17,6 @@ Run the following command for baseline uniform sampling reconstruction using CS
 
 "matlab -nodesktop -nosplash -r "meas='BPD';run compressive_sensing_radar_v1(2,meas)""  
  
+
+
+We are currently working on making the code public. Check back in later for the code to run A-1 and A-2 from our paper. 
