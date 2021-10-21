@@ -208,8 +208,8 @@ for num, images in enumerate(files):
 
 	#save x-point list for further azimuth processing
 	mat_name = saveDir + radar_time + '.mat'
-        if args.direction=='stereo':
-            sio.savemat(mat_name, {'x_point_centre': x_points, 'object_type': object_type})
-        else:
-            sio.savemat(mat_name, {'x_point_rear': x_points, 'object_type': object_type})
+	if args.direction=='stereo':
+		sio.savemat(mat_name, {'x_point_centre': x_points, 'object_type': object_type})
+	else:
+		sio.savemat(mat_name, {'x_point_rear': x_points, 'object_type': object_type})
 
