@@ -1,5 +1,6 @@
 # Adaptive-Radar-Acquisition
 Adaptive automotive radar data acquisition 
+Please check the paper for detailed understanding of the algorithm: https://arxiv.org/pdf/2010.02367.pdf
 
 
 This code runs object detection on images and stores classes and bounding boxes as .pickle file. 
