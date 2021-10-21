@@ -10,7 +10,7 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Arguments for coordinate transform.')
 parser.add_argument('--scene',type=int, default = 1, help='data scene number')
-parser.add_argument('--direction',type=str, default ='front', help='front data for True and rear data for False')
+parser.add_argument('--direction',type=str, default ='stereo', help='stereo for front and mono_rear for rear')
 args = parser.parse_args()
 
 
@@ -208,9 +208,8 @@ for num, images in enumerate(files):
 
 	#save x-point list for further azimuth processing
 	mat_name = saveDir + radar_time + '.mat'
-	sio.savemat(mat_name, {'x_point_centre': x_points, 'object_type': object_type})
-
-
-
-	#break
+        if args.direction=='stereo':
+            sio.savemat(mat_name, {'x_point_centre': x_points, 'object_type': object_type})
+        else:
+            sio.savemat(mat_name, {'x_point_rear': x_points, 'object_type': object_type})
 
